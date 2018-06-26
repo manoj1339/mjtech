@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+
+*{
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	width: 100%;
+	font-family: sans-serif;
+	background: #f6f1f1;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* --------------------------HEADER SECTION -------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+header{
+	width: 100%;
+	height: 100px;
+	background: #ffffff;
+}
+
+header h1{
+	height: 100%;
+	width: 250px;
+	margin: auto;
+	line-height: 100px;
+	font-size: 35px;
+	font-weight: 500;
+	position: relative;
+	perspective: 300px;
+	-webkit-perspective: 300px;
+	overflow: hidden;
+}
+
+header h1 #codefor{
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 200px;
+    top: 0px;
+	left: 0px;
+}
+
+/* ---------------------------------------------------------------- */
+/*--------------------Animation for Header------------------------- */
+
+header h1 #fun{
+	display: block;
+	position: absolute;
+	font-family: 'Shrikhand', cursive;
+	height: 100%;
+	width: 100px;
+    top: 0px;
+	left: 145px;
+	animation: rotor 2s linear infinite;
+	-webkit-animation: rotor 2s linear infinite;
+}
+
+
+
+@keyframes rotor{
+	0%{
+		transform: rotateX(0deg);
+	}
+	
+	70%{
+		transform: rotateX(90deg);
+	}
+	
+	100%{
+		transform: rotateX(360deg);
+	}
+}
+
+@-webkit-keyframes rotor{
+	0%{
+		-webkit-transform: rotateX(0deg);
+	}
+	
+	70%{
+		-webkit-transform: rotateX(90deg);
+	}
+	
+	100%{
+		-webkit-transform: rotateX(360deg);
+	}
+}
+
+
+/* -------------------Animation Ends here -------------------------- */
+/* ----------------------------------------------------------------- */
+
+
+.content{
+	max-width: 900px;
+	margin: 50px auto;
+	padding: 60px;
+	background: #fff;
+	box-shadow: 5px 5px 10px grey;
+	border-radius: 8px;
+}
+
+.content > h2{
+	margin: 20px 0px;
+	padding: 0px 30px;
+	font-weight: 400;
+	color: black;
+	font-family: monospace;
+	cursor: pointer;
+	position: relative;
+}
+
+.content h2 .fa{
+	position: absolute;
+	left: -5px;
+	margin: 0px 8px;
+	color: green;
+}
+
+.content h2 .fa-minus-circle{
+	color: red;
+	Z-index: 10;
+}
+
+.codeblock{
+	display: none;
+	padding-bottom: 35px;
+	border-bottom: 1px solid #d7d1d1;
+}
+
+.codeblock button{
+	padding: 8px 12px;
+	font-size: 14px;
+	color: #fff;
+	background: orange;
+	border: none;
+	outline: none;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+.codeblock > div{
+	height: 500px;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	overflow: auto;
+	border-left: 8px solid #49e049;
+	border-bottom: 1px solid grey;
+	border-top: 1px solid grey;
+	border-right: 1px solid grey;
+}
+
+.codeblock > p{
+	padding: 10px;
+	font-family: helvetica;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #d84a4a;
+}
+
+.codeblock .c code{
+	line-height: 20px;
+	font-size: 18px;
+}
+
+.codeblock .java{
+	display: none;
+}
+
+.codeblock div .output{
+	width: 100%;
+	padding: 10px;
+	margin: 30px 0px;
+	background: black;
+}
+
+.codeblock div .output p{
+	margin: 8px 0px;
+	font-family: courier;
+	color: white;
+}
+
+
+.focus{
+	box-shadow: inset 4px 4px 3px black;
+}
+
+.keywords{
+	font-size: 18px;
+	color: blue;
+}
+
+
+.library{
+	font-size: 18px;
+	color: brown;
+}
+
+.strings{
+	font-size: 18px;
+	color: orange;
+}
+
+.comments{
+	font-size: 18px;
+	color: green;
+}
+
+@media screen and (max-width: 500px)
+{
+	.content{
+		margin: 20px 0px;
+		padding: 8px;
+		border-radius: 0px;
+	}
+}
+
+@media screen and (min-width: 501px) and (max-width: 899px)
+{
+	.content{
+		margin: 20px 10px;
+		padding: 15px;
+		border-radius: 0px;
+	}
+}
+

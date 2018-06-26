@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="c and java programming" />
+		<meta name="keywords" content="C, JAVA, PALINDROME, FIBONACCI, FACTORIAL, BUBBLE SORT, LARGEST NUMBER" />
+		<meta name="author" content="Manoj Avhale" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		
+    	<title>Code for fun !</title>
+		
+    </head>
+	
+    <body>
+	
+	    <!-- Top header -->
+		<header>
+		    <h1><span id="codefor">Code for </span><span id="fun" style="color:red;">Fun !</span></h1>
+		</header>
+		
+		<!-- All content goes here -->
+		<div class="content">
+		    <h2 id="code1"><i class="fa fa-plus-circle"></i><i class="fa"></i>Palindrome Number</h2>
+			
+			
+			<!-- Palindrome Number codeblock -->
+			<div class="codeblock" id="block1">
+			    <p class="desc">
+				    A palindromic number or numeral palindrome is a number that remains the same when its digits are reversed.
+					Example, 151. When we reverse 151 we get 151. Hence 151 is palindrome number.
+				</p>
+			    <button id="c1" class="focus">C</button><button id="java1">Java</button>
+				<div class="c" id="code-c-1">
+				    <div>
+						<code>
+							<span class="library">#include&lt;stdio.h&gt;</span><br/>
+	 
+							<span class="keywords">int</span><span class="others"> main()<br/>
+							{</span><br/>
+							   <span class="keywords">int</span><span class="variables"> n, reverse, t</span>  = 0;<br/><br/>
+							 
+							   printf(<span class="strings">"Enter a number to check if it is a palindrome or not\n"</span>);<br/>
+							   scanf("%d", &n);<br/><br/>
+							 
+							   <span class="variables">t</span> = n;<br/><br/>
+							 
+							   <span class="keywords">while</span> (t != 0)<br/>
+							   {<br/>
+								  reverse = reverse * 10;<br/>
+								  reverse = reverse + t%10;<br/>
+								  t = t/10;<br/>
+							   }<br/><br/>
+							 
+							   <span class="keywords">if</span> (n == reverse)<br/>
+								  printf(<span class="strings">"%d is a palindrome number.\n"</span>, n);<br/>
+							   <span class="keywords">else</span><br/>
+								  printf(<span class="strings">"%d isn't a palindrome number.\n"</span>, n);<br/><br/>
+							 
+							   return 0;<br/>
+							}
+						</code>
+					</div>
+					
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+					    <p>Enter a number to check if it is a palindrome or not</p>
+						<p>1551</p>
+						<p>1551 is a palindrome number.</p>
+					</div>
+				</div>
+				
+				
+				<div class="java" id="code-java-1">
+				    <div>
+						<code>
+							<span class="keywords">class</span> PalindromeExample{  <br><br>
+								 <span class="keywords">public static void main</span>(String args[]){<br><br>
+								  <span class="keywords">int</span> r,sum=0,temp; <br>   
+								  <span class="keywords">int</span> n=454;   <span class="comments">//It is the number variable to be checked for palindrome</span><br>  
+								  temp=n;  <br> <br> 
+								  <span class="keywords">while</span>(n>0){ <br> 
+								   r=n%10;  <span class="comments">              //getting remainder</span><br> 
+								   sum=(sum*10)+r; <br>
+								   n=n/10; <br>
+								  } <br><br>
+								  <span class="keywords">if</span>(temp==sum)<br> 
+								   System.out.println(<span class="strings">"palindrome number "</span>);<br> 
+								  <span class="keywords">else</span><br>    
+								   System.out.println(<span class="strings">"not palindrome"</span>);<br>        
+								   }  <br>
+								}        
+						</code>
+					</div>
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+						<p>palindrome number.</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<h2 id="code2"><i class="fa fa-plus-circle"></i><i class="fa"></i>Fibonacci Series</h2>
+			
+			<!-- Fibocnacci Series codeblock -->
+			<div class="codeblock" id="block2">
+			    <p class="desc">
+				     In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, 
+					 and characterized by the fact that every number after the first two is the sum of the two preceding ones.
+				</p>
+			    <button id="c2" class="focus">C</button><button id="java2">Java</button>
+				<div class="c" id="code-c-2">
+				    <div>
+						<code>
+							<span class="library">#include&lt;stdio.h&gt;</span><br>    
+							<span class="keywords">int</span> main()<br>    
+							{ <br><br>
+							
+							 <span class="keywords">int</span> n1=0,n2=1,n3,i,number;<br><br>    
+							 printf(<span class="strings">"Enter the number of elements:"</span>);<br>   
+							 scanf(<span class="strings">"%d"</span>,&number);<br>   
+							 printf(<span class="strings">"\n%d %d"</span>,n1,n2);  <span class="comments">//printing 0 and 1</span><br><br>  
+							 <span class="keywords">for</span>(i=2;i &lt; number;++i) <span class="comments">   //loop starts from 2 because 0 and 1 are already printed</span><br>  
+							 { <br><br>
+							  n3=n1+n2;<br>  
+							  printf(<span class="strings">" %d"</span>,n3);<br>   
+							  n1=n2;<br> 
+							  n2=n3;<br><br>
+							 } <br><br>
+							  <span class="keywords">return</span> 0;<br>
+							 }                
+						</code>
+					</div>
+					
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+					    <p>Enter the number of elements:10</p>
+						<p>0 1 1 2 3 5 8 13 21 34</p>
+					</div>
+				</div>
+				
+				
+				<div class="java" id="code-java-2">
+				    <div>
+						<code>
+							<span class="keywords">class</span> FibonacciExample1{  <br><br>
+							<span class="keywords">public static void main</span>(String args[])<br> 
+							{ <br><br>
+							 <span class="keywords">int</span> n1=0,n2=1,n3,i,count=10;<br>  
+							 System.out.print(n1+<span class="strings">" "</span>+n2);   <span class="comments">   //printing 0 and 1</span><br><br>     
+							 <span class="keywords">for</span>(i=2;i&lt;count;++i)   <span class="comments">//loop starts from 2 because 0 and 1 are already printed</span><br> 
+							 { <br>
+							  n3=n1+n2;<br>  
+							  System.out.print(<span class="strings">" "</span>+n3);<br>  
+							  n1=n2;<br>   
+							  n2=n3;<br><br>
+							 }<br><br>  
+							}<br>
+							}       
+						</code>
+					</div>
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+						<p>0 1 1 2 3 5 8 13 21 34</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<h2 id="code3"><i class="fa fa-plus-circle"></i><i class="fa"></i>Factorial of Number</h2>
+			
+			<!-- Factorial of Number codeblock -->
+			<div class="codeblock"id="block3">
+			    <p class="desc">
+				    In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example,
+                                                    5!=5*4*3*2*1=120.
+            The value of 0! is 1, according to the convention for an empty product.
+				</p>
+			    <button id="c3" class="focus">C</button><button id="java3">Java</button>
+				<div class="c" id="code-c-3">
+				    <div>
+						<code>
+							<span class="library">#include&lt;stdio.h&gt;</span><br>
+							<span class="keywords">int</span> main()<br>    
+							{<br><br>   
+							 <span class="keywords">int</span> i,fact=1,number;<br><br>   
+							 printf(<span class="strings">"Enter a number: "</span>);<br>    
+							scanf(<span class="strings">"%d"</span>,&number);<br><br>  
+							<span class="keywords">for</span>(i=1;i&lt;=number;i++)<br>
+							{<br><br>
+							fact=fact*i;<br>    
+							  }<br>    
+							  printf(<span class="strings">"Factorial of %d is: %d"</span>,number,fact);<br>    
+							<span class="keywords">return</span> 0;<br>  
+							}                 
+											                            
+						</code>
+					</div>
+					
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+					    <p>Enter a number:4 </p>
+						<p>Factorial of 4 is: 24</p>
+					</div>
+				</div>
+				
+				
+				<div class="java" id="code-java-3">
+				    <div>
+						<code>
+							<span class="keywords">class</span> FactorialExample<br>{<br><br>
+							 <span class="keywords">public static void main</span>(String args[])<br>{<br><br>  
+							  <span class="keywords">int</span> i,fact=1;<br>  
+							  <span class="keywords">int</span> number=5;    <span class="comments">   //It is the number to calculate factorial</span><br><br>   
+							  <span class="keywords">for</span>(i=1;i&lt;=number;i++){<br><br>    
+							  fact=fact*i;<br><br>   
+							  }<br>    
+							  System.out.println(<span class="strings">"Factorial of "+number+" is: "</span>+fact);<br>    
+							 }<br>  
+							}                   
+						</code>
+					</div>
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+						<p>Factorial of 5 is: 120 </p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<h2 id="code4"><i class="fa fa-plus-circle"></i><i class="fa"></i>Bubble Sort</h2>
+			
+			<!-- Bubble sort codeblock -->
+			<div class="codeblock" id="block4">
+			    <p class="desc">
+				    Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps 
+					through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.
+					The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted.
+				</p>
+			    <button id="c4" class="focus">C</button><button id="java4">Java</button>
+				<div class="c" id="code-c-4">
+				    <div>
+						<code>
+							<span class="library">#include&lt;stdio.h&gt;<br>
+							#include&lt;stdbool.h&gt;<br>
+							#define MAX 10</span><br><br>
+							<span class="keywords">int</span> list[MAX] = {1,8,4,6,0,3,5,2,7,9};<br>
+							<span class="keywords">void</span> display()<br>
+							{<br><br>
+							<span class="keywords">int</span> i;<br>
+							printf(<span class="strings">"["</span>);<br>	
+						   <span class="comments">// navigate through all items</span><br> 
+						   <span class="keywords">for</span>(i = 0; i &lt; MAX; i++)<br> 
+							 {<br>
+							  printf(<span class="strings">"%d "</span>,list[i]);<br>
+						   }<br>	
+						   printf(<span class="strings">"]\n"</span>);<br>
+							}<br>
+							<span class="keywords">void</span> bubbleSort()<br> 
+							{<br>
+							<span class="keywords">int</span> temp;<br>
+							<span class="keywords">int</span> i,j;<br>	
+							<span class="keywords">bool</span> swapped = false;<br><br>   
+						   <span class="comments">// loop through all numbers</span><br> 
+						   <span class="keywords">for</span>(i = 0; i &lt; MAX-1; i++)<br> 
+							 {<br><br>
+							  swapped = false;<br><br>		
+							  <span class="comments">// loop through numbers falling ahead</span><br> 
+							  <span class="keywords">for</span>(j = 0; j &lt; MAX-1-i; j++)<br> 
+								{<br><br>
+								 printf(<span class="strings">"     Items compared: [ %d, %d ] "</span>, list[j],list[j+1]);<br>
+								 <span class="comments">// check if next number is lesser than current no<br>
+								 //   swap the numbers.<br> 
+								 //  (Bubble up the highest number)<br></span>		
+								 <span class="keywords">if</span>(list[j] &gt; list[j+1])<br> 
+								   {<br>
+									temp = list[j];<br>
+									list[j] = list[j+1];<br>
+									list[j+1] = temp;<br>
+									swapped = true;<br>
+									printf(<span class="strings">" => swapped [%d, %d]\n"</span>,list[j],list[j+1]);<br>            
+								 }<br> 
+								   <span class="keywords">else</span>{<br>
+									printf(<span class="strings">" => not swapped\n"</span>);<br>
+								 }<br>
+									
+							  }<br>
+
+							  <span class="comments">// if no number was swapped that means<br> 
+							  //   array is sorted now, break the loop.</span><br><br>
+							  <span class="keywords">if</span>(!swapped) {<br>
+								 <span class="keywords">break</span>;<br>
+							  }<br>
+							  
+							  printf(<span class="strings">"Iteration %d#: "</span>,(i+1));<br> 
+							  display();<br>
+							   }<br>	
+							}<br>
+							<span class="keywords">void</span> main() {<br>
+						   printf(<span class="strings">"Input Array: "</span>);<br>
+						   display();<br>
+						   printf(<span class="strings">"\n"</span>);<br>	
+						   bubbleSort();<br>
+						   printf(<span class="strings">"\nOutput Array:"</span>);<br>
+						   display();<br>
+							}                           
+						</code>
+					</div>
+					
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+					    <p>Input Array: 1,8,4,6,0,3,5,2,7,9</p>
+						<p>Output Array: 0,1,2,3,4,5,6,7,8,9</p>
+					</div>
+				</div>
+				
+				
+				<div class="java" id="code-java-4">
+				    <div>
+						<code>
+							<span class="keywords">public class</span> BubbleSortExample <br>{<br><br>  
+							<span class="keywords">static void</span> bubbleSort(<span class="keywords">int[]</span> arr) <br>{<br><br>
+							<span class="keywords">int</span> n = arr.length;<br>  
+							<span class="keywords">int</span> temp = 0;<br>  
+							<span class="keywords">for</span>(<span class="keywords">int</span> i=0; i &lt; n; i++){<br><br> 
+							<span class="keywords">for</span>(<span class="keywords">int</span> j=1; j &lt; (n-i); j++){<br>  
+							<span class="keywords">if</span>(arr[j-1] &gt; arr[j]){<br>  
+							<span class="comments">//swap elements</span><br>  
+							    temp = arr[j-1];<br>  
+							    arr[j-1] = arr[j];<br>  
+							      arr[j] = temp;<br>  
+							       }<br>                            
+							    }<br>  
+							  }<br>    
+							}<br>  
+							<span class="keywords">public static void main</span>(String[] args) {<br>  
+							<span class="keywords">int</span> arr[] ={3,60,35,2,45,320,5};<br>                   
+							System.out.println(<span class="strings">"Array Before Bubble Sort"</span>);<br>  
+							<span class="keywords">for</span>(<span class="keywords">int</span> i=0; i &lt; arr.length; i++){<br>  
+							System.out.print(arr[i] + " ");<br>  
+							}<br>  
+							System.out.println();<br>                   
+							bubbleSort(arr);    <span class="comments">//sorting array elements using bubble sort<br></span>                   
+							System.out.println(<span class="strings">"Array After Bubble Sort "</span>);<br>  
+							<span class="keywords">for</span>(<span class="keywords">int</span> i=0; i &lt; arr.length; i++){<br><br>  
+							System.out.print(arr[i] + <span class="strings">" "</span>);<br> 
+							}<br>    
+							}<br>  
+							}<br>    
+						</code>
+					</div>
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+						<p>Array Before Bubble Sort 3 60 35 2 45 320 5</p>
+						<p>Array After Bubble Sort 2 3 5 35 45 60 320</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<h2 id="code5"><i class="fa fa-plus-circle"></i><i class="fa"></i>3rd Largest Number in an array</h2>
+			
+			<!-- 3rd Largest Number in an array codeblock -->
+			<div class="codeblock" id="block5">
+			    <p class="desc">
+				    An array is a systematic arrangement of similar objects, 
+					usually in rows and columns. For a given array lets find out the 3rd largest no.
+				</p>
+			    <button id="c5" class="focus">C</button><button id="java5">Java</button>
+				<div class="c" id="code-c-5">
+				    <div>
+						<code>
+							<span class="library">#include&lt;bits/stdc++.h&gt;</span><br><br>
+							<span class="keywords">void</span> thirdLargest(<span class="keywords">int</span> arr[], <span class="keywords">int</span> arr_size)<br>
+							{<br><br>
+							<span class="comments">/* There should be atleast three elements */</span><br><br>
+							<span class="keywords">if</span> (arr_size < 3)<br>
+							{<br><br>
+								printf(<span class="strings">" Invalid Input "</span>);<br>
+								<span class="keywords">return</span>;<br><br>
+							}<br>
+							 <span class="comments">// Find first largest element</span><br><br>
+							<span class="keywords">int</span> first = arr[0];<br>
+							<span class="keywords">for</span> (<span class="keywords">int</span> i = 1; i &lt; arr_size ; i++){<br><br>
+								<span class="keywords">if</span>(arr[i] &gt; first)<br>
+									first = arr[i];<br><br>
+							<span class="comments">// Find second largest element</span><br><br>
+							<span class="keywords">int</span> second = INT_MIN;<br>
+							<span class="keywords">for</span> (<span class="keywords">int</span> i = 0; i &lt; arr_size ; i++)<br>{<br><br>
+								<span class="keywords">if</span> (arr[i] &gt; second && arr[i] &lt; first)<br>
+									second = arr[i];<br><br>
+							<span class="comments">// Find third largest element</span><br><br>
+							
+							<span class="keywords">int</span> third = INT_MIN;<br>
+							<span class="keywords">for </span>(<span class="keywords">int</span> i = 0; i &lt; arr_size ; i++)<br>{<br><br>
+								<span class="keywords">if</span> (arr[i] &gt; third && arr[i] &lt; second)<br>
+									third = arr[i];<br>
+							 printf(<span class="strings">"The third Largest element is %d\n"</span>, third);<br><br>
+							}<br>
+							<span class="keywords">int</span> main()<br>
+							{<br>
+							<span class="keywords">int</span> arr[] = {12, 13, 1, 10, 34, 16};<br>
+							<span class="keywords">int</span> n = sizeof(arr)/sizeof(arr[0]);<br>
+							thirdLargest(arr, n);<br><br>
+							<span class="keywords">return</span> 0;<br>
+							}                                      
+						</code>
+					</div>
+					
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+						<p>The third Largest element is 13</p>
+					</div>
+				</div>
+				
+				
+				<div class="java" id="code-java-5">
+				    <div>
+						<code>
+							<span class="keywords">public class</span> ThirdLargestInArrayExample<br>{<br><br>
+							<span class="keywords">public static int</span> getThirdLargest(<span class="keywords">int[]</span> a, <span class="keywords">int</span> total)<br>{<br><br>  
+							<span class="keywords">int</span> temp;<br><br>  
+							<span class="keywords">for</span> (<span class="keywords">int</span> i = 0; i &lt; total; i++)<br>   
+							{<br><br> 
+							<span class="keywords">for</span> (<span class="keywords">int</span> j = i + 1; j &lt; total; j++)<br>   
+							{<br><br>  
+							<span class="keywords">if</span> (a[i] &gt; a[j])<br>   
+							{<br>  
+							temp = a[i];<br>  
+							a[i] = a[j];<br>  
+							a[j] = temp;<br>  
+							}<br>  
+							}<br>  
+							}<br>  
+							<span class="keywords">return</span> a[total-3];<br>  
+							}<br>  
+							<span class="keywords">public static void main</span>(String args[])<br>{<br><br>  
+							<span class="keywords">int</span> a[]={1,2,5,6,3,2};<br>  
+							<span class="keywords">int</span> b[]={44,66,99,77,33,22,55};<br>  
+							System.out.println(<span class="strings">"Third Largest: "</span>+getThirdLargest(a,6));<br>  
+							System.out.println(<span class="strings">"Third Largest: "</span>+getThirdLargest(b,7));<br><br>  
+							}<br>
+							}                                                              
+						</code>
+					</div>
+					<div class="output">
+					    <h2 style="color: white;font-weight:bold">Output</h2>
+						<p>Third Largest: 3</p>
+						<p>Third Largest: 66</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- Javascript -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
