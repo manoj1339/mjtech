@@ -1,5 +1,2 @@
-# mjtech
-Web development Projects
-Cricket Score Website <a href="www.googly.online">Googly</a>
-Car washing and Detailing Website <a href="www.carecarz.epizy.com">Carecarz</a>
-
+# Just a simple template for website
+build on html, css, javascript and jquery
